@@ -1,0 +1,40 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Local artifacts
+model/
+output/
+outputs/
+checkpoints/
+*.tar.gz
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.log
+.cache/
+hf_cache/
+wandb/
+mlruns/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+.claude/
+CLAUDE.md
+
+# AWS / secrets — defensive (no env files should ever live here)
+.env
+.env.*
+*.pem

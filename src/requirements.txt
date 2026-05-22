@@ -1,0 +1,15 @@
+# Installed by SageMaker at training-container startup.
+#
+# DLC base (May 2026): pytorch 2.9.0 + cu130, py312. trl/peft/bitsandbytes/
+# datasets/accelerate/huggingface_hub are already preinstalled.
+#
+# transformers pinned to ==5.5.0 — the only version that satisfies BOTH
+# Gemma 4 architecture support (added in 5.5.0) AND unsloth_zoo's upper
+# bound (latest unsloth_zoo 2026.5.3 caps at transformers <= 5.5.0).
+# Going to 5.8+ surfaces a pip ResolutionImpossible.
+#
+# Don't pin unsloth_zoo explicitly — let unsloth pull a compatible version.
+
+unsloth @ git+https://github.com/unslothai/unsloth.git
+unsloth_zoo>=2026.4.6
+transformers==5.5.0
